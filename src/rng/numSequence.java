@@ -59,7 +59,17 @@ public abstract class numSequence {
 
     @Override
     public String toString() {
-        return list.toString();
+        StringBuilder b = new StringBuilder();
+        int count = 0;
+        for (int i = 0; i < list.size(); i++){
+            b.append(list.get(i)).append(" ");
+            count++;
+            if (count == 10) {
+                b.append("\n");
+                count = 0;
+            }
+        }
+        return b.toString();
     }
 
     public void output(){
